@@ -612,17 +612,6 @@ body.arabic .switch-knob {
     gap: 80px;
 }
 
-body.arabic .hero-container {
-    direction: ltr;
-}
-body.arabic .hero-content {
-    direction: rtl;
-    text-align: right;
-}
-
-body.arabic .hero-visual {
-    direction: ltr;
-}
 
 .hero-tag {
 
@@ -2710,4 +2699,12 @@ body.light-mode .contact-link > i {
         letter-spacing: 0;
         line-height: 1;
     }
+}
+/* =========================================
+   KEEP HERO EXACTLY LTR
+========================================= */
+
+body.arabic #home,
+body.arabic #home * {
+    direction: ltr !important;
 }

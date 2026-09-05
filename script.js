@@ -41,7 +41,7 @@ let currentLanguage =
 function updateLanguage() {
 
     const elements =
-        document.querySelectorAll("[data-en][data-ar]");
+         document.querySelectorAll("[data-en][data-ar]:not(.hero-fixed-en)");
 
     elements.forEach(element => {
 
