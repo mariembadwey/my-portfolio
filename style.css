@@ -2664,3 +2664,50 @@ body.light-mode .contact-link > i {
     color: #7c3aed;
     background: rgba(124, 58, 237, 0.08);
 }
+/* Fix Arabic Hero on mobile */
+/* =========================================
+   MOBILE ARABIC HERO FIX
+========================================= */
+
+@media (max-width: 600px) {
+
+    body.arabic .hero-content {
+        width: 100%;
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+        overflow: visible;
+    }
+
+    body.arabic .hero-intro,
+    body.arabic .hero-role,
+    body.arabic .hero-description {
+        width: 100%;
+        max-width: 100%;
+        overflow: visible;
+        white-space: normal;
+        direction: rtl;
+        text-align: center;
+        font-family: Arial, Tahoma, sans-serif;
+    }
+
+    body.arabic .hero-intro {
+        font-size: 18px;
+        line-height: 1.6;
+    }
+
+    body.arabic .hero-role {
+        font-size: 17px;
+        line-height: 1.6;
+    }
+
+    body.arabic .hero-description {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    body.arabic .hero-title {
+        letter-spacing: 0;
+        line-height: 1;
+    }
+}
