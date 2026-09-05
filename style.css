@@ -2653,52 +2653,53 @@ body.light-mode .contact-link > i {
     color: #7c3aed;
     background: rgba(124, 58, 237, 0.08);
 }
-/* Fix Arabic Hero on mobile */
 /* =========================================
-   MOBILE ARABIC HERO FIX
+   HERO - ALWAYS ENGLISH / LTR
 ========================================= */
+
+body.arabic #home,
+body.arabic #home * {
+    direction: ltr !important;
+}
+
+body.arabic #home .hero-content {
+    width: 100%;
+    max-width: 100%;
+    overflow: visible;
+    text-align: center;
+}
+
+body.arabic #home .hero-intro,
+body.arabic #home .hero-role,
+body.arabic #home .hero-description,
+body.arabic #home .hero-title {
+    direction: ltr !important;
+    text-align: center;
+    max-width: 100%;
+    overflow: visible;
+    white-space: normal;
+}
 
 @media (max-width: 600px) {
 
-    body.arabic .hero-content {
-        width: 100%;
-        max-width: 100%;
-        align-items: center;
-        text-align: center;
-        overflow: visible;
+    body.arabic #home .hero-title {
+        font-size: clamp(50px, 17vw, 65px);
+        letter-spacing: -2px;
+        line-height: 1;
     }
 
-    body.arabic .hero-intro,
-    body.arabic .hero-role,
-    body.arabic .hero-description {
-        width: 100%;
-        max-width: 100%;
-        overflow: visible;
-        white-space: normal;
-        direction: rtl;
-        text-align: center;
-        font-family: Arial, Tahoma, sans-serif;
-    }
-
-    body.arabic .hero-intro {
-        font-size: 18px;
+    body.arabic #home .hero-role {
+        font-size: 16px;
         line-height: 1.6;
+        overflow-wrap: normal;
+        word-break: normal;
     }
 
-    body.arabic .hero-role {
-        font-size: 17px;
-        line-height: 1.6;
-    }
-
-    body.arabic .hero-description {
-        font-size: 12px;
+    body.arabic #home .hero-description {
+        font-size: 11px;
         line-height: 1.8;
     }
 
-    body.arabic .hero-title {
-        letter-spacing: 0;
-        line-height: 1;
-    }
 }
 /* =========================================
    KEEP HERO EXACTLY LTR
