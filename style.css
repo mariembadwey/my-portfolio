@@ -2680,32 +2680,86 @@ body.arabic #home .hero-title {
     white-space: normal;
 }
 
-@media (max-width: 600px) {
-
-    body.arabic #home .hero-title {
-        font-size: clamp(50px, 17vw, 65px);
-        letter-spacing: -2px;
-        line-height: 1;
-    }
-
-    body.arabic #home .hero-role {
-        font-size: 16px;
-        line-height: 1.6;
-        overflow-wrap: normal;
-        word-break: normal;
-    }
-
-    body.arabic #home .hero-description {
-        font-size: 11px;
-        line-height: 1.8;
-    }
-
-}
 /* =========================================
-   KEEP HERO EXACTLY LTR
+   HERO - ALWAYS ENGLISH / LTR
+   Works on Arabic mobile too
 ========================================= */
 
-body.arabic #home,
-body.arabic #home * {
+#home {
     direction: ltr !important;
+}
+
+#home .hero-container,
+#home .hero-content,
+#home .hero-tag,
+#home .hero-intro,
+#home .hero-title,
+#home .hero-title span,
+#home .hero-role,
+#home .hero-description,
+#home .hero-buttons,
+#home .hero-buttons a,
+#home .hero-visual,
+#home .scroll-indicator {
+    direction: ltr !important;
+}
+
+#home .hero-content {
+    text-align: center;
+}
+
+#home .hero-intro,
+#home .hero-title,
+#home .hero-role,
+#home .hero-description {
+    text-align: center;
+}
+
+/* Prevent English technical text from being reordered */
+#home .hero-role,
+#home .hero-description {
+    unicode-bidi: plaintext;
+}
+
+/* =========================================
+   MOBILE HERO
+========================================= */
+
+@media (max-width: 600px) {
+
+    #home .hero-content {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        overflow: visible;
+    }
+
+    #home .hero-title {
+        font-size: 65px;
+        letter-spacing: -2px;
+        line-height: 1;
+        width: 100%;
+    }
+
+    #home .hero-role {
+        width: 100%;
+        max-width: 100%;
+        font-size: 16px;
+        line-height: 1.6;
+        white-space: normal;
+        overflow: visible;
+    }
+
+    #home .hero-description {
+        width: 100%;
+        max-width: 100%;
+        font-size: 11px;
+        line-height: 1.8;
+        white-space: normal;
+        overflow: visible;
+    }
+
+    #home .hero-buttons {
+        justify-content: center;
+    }
 }
